@@ -27,6 +27,18 @@ public class IntArrayWorker
     }
     return total;
   }
+
+  public int getCount(int val) {
+    int count = 0;
+    for(int row = 0; row < matrix.length; row++) {
+      for(int col = 0; col < matrix[0].length; col++) {
+        if(matrix[row][col] == val) {
+          count++;
+        }
+      }
+    }
+    return count;
+  }
   
   /**
    * Method to return the total using a nested for-each loop
