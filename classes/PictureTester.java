@@ -40,9 +40,18 @@ public class PictureTester
   }
 
   public static void testMirrorHorizontal() {
-    Picture motorcycle = new Picture("motorcycle.jpg");
+    Picture moon = new Picture("moon-surface.jpg");
+    moon.explore();
+    moon.mirrorHorizontal();
+    moon.explore();
   }
-  
+
+  public static void testMirrorBotToTop() {
+    Picture robot = new Picture("robot.jpg");
+    robot.explore();
+    robot.mirrorBotToTop();
+    robot.explore();
+  }
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
@@ -83,7 +92,9 @@ public class PictureTester
     //testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
-    testMirrorVerticalRightToLeft();
+    //testMirrorVerticalRightToLeft();
+    //testMirrorHorizontal();
+    testMirrorBotToTop();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
