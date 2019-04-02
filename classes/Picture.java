@@ -172,9 +172,6 @@ public class Picture extends SimplePicture
     }
   }
 
-  public void mirrorDiagonal() {
-    Pixel[][] pixels = this.getPixels2D();
-  }
   
   /** Mirror just part of a picture of a temple */
   public void mirrorTemple()
@@ -191,11 +188,22 @@ public class Picture extends SimplePicture
       // loop from 13 to just before the mirror point
       for (int col = 13; col < mirrorPoint; col++)
       {
-        
+        count++;
         leftPixel = pixels[row][col];      
-        rightPixel = pixels[row]                       
-                         [mirrorPoint - col + mirrorPoint];
+        rightPixel = pixels[row][mirrorPoint - col + mirrorPoint];
         rightPixel.setColor(leftPixel.getColor());
+      }
+    }
+    System.out.println("Count: " + count);
+  }
+
+  public void mirrorArms() {
+    Pixel[][] pixels = this.getPixels2D();
+    Pixel topPixel = null, bottomPixel = null;
+    int top = 158, left = 105, bottom = 190, right = 169;
+    for( int row = 191; row < 223; row ++) {
+      for(int col = 105; col < 169; col++) {
+        topPixel = pixels[row - 32][col];
       }
     }
   }
