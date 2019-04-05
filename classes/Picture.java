@@ -239,6 +239,13 @@ public class Picture extends SimplePicture
     }   
   }
 
+  public void newCopy(Picture fromPic, int fromRow, int fromCol,
+                      int endRow, int endCol, int startRow, int startCol) {
+    Pixel fromPixel = null, toPixel = null;
+    Pixel[][] toPixels = this.getPixels2D();
+    Pixel[][] fromPixels = fromPic.getPixels2D();
+  }
+
   /** Method to create a collage of several pictures */
   public void createCollage()
   {
