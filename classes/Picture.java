@@ -244,6 +244,16 @@ public class Picture extends SimplePicture
     Pixel fromPixel = null, toPixel = null;
     Pixel[][] toPixels = this.getPixels2D();
     Pixel[][] fromPixels = fromPic.getPixels2D();
+    int r = 0, c = 0;
+    for(int row = fromRow; row <= endRow; row++) {
+      for(int col = fromCol; col <= endCol; col++) {
+        fromPixel = fromPixels[row][col];
+        toPixel = toPixels[startRow + r][startCol + c];
+        toPixel.setColor(fromPixel.getColor());
+        r++;
+        c++;
+      }
+    }
   }
 
   /** Method to create a collage of several pictures */
